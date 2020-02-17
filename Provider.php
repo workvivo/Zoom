@@ -35,7 +35,7 @@ class Provider extends AbstractProvider
      */
     protected function getUserByToken($token)
     {
-        $response = $this->getHttpClient()->post(
+        $response = $this->getHttpClient()->get(
             'https://api.zoom.us/v2/users/me', [
             'headers' => [
                 'Authorization' => 'Bearer '.$token,
